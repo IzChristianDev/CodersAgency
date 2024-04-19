@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.75;
+    color: #061526;
+
+    scroll-behavior: smooth;
+}
+
+.logo{
+    position: absolute;
+    top: 16px;
+    left: 100px;
+    z-index: 20;
+}
+
+.logo h1{
+    font-weight: 700;
+}
+
+.toggle{
+    cursor: pointer;
+    position: fixed;
+
+    top: 16px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+
+    background: rgb(41, 41, 41) url(https://github.com/bradtraversy/creative-agency-website/blob/master/images/menu.png?raw=true);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+
+    border: none;
+    border-radius: 10px;
+
+    z-index: 20;
+}
+
+.toggle.active{
+    background: rgb(41, 41, 41) url("https://github.com/bradtraversy/creative-agency-website/blob/master/images/close.png?raw=true");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.navigation{
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 1s;
+}
+
+.navigation.active{
+    right: 0;
+
+    transition: 1s;
+}
+
+.navigation ul{
+    position: relative;
+    list-style-type: none;
+}
+
+.navigation ul li{
+    position: relative;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.navigation ul li a{
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.navigation ul li a:hover{
+    color: black;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    padding: 100px 40px;
+    margin-top: 60px;
+}
+
+h2{
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+p{
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+section.home{
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.home-content{
+    height: 650px;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-content .img{
+    width: 400px;
+    height: 250px;
+
+    background-image: url("https://i.pinimg.com/originals/10/9d/73/109d732d44806095d8c29e89b8dddb54.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 50px;
+}
+
+.services{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+
+    flex-wrap: wrap;
+}
+
+.title{
+    text-align: center;
+
+    max-width: 90%;
+}
+
+.services .service .icon img{
+    max-width: 100px;
+}
+
+.services .service{
+    padding: 30px;
+
+    width: 500px;
+    margin: 20px;
+
+    transition: 0.25s;
+}
+
+.services .service:hover{
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.25s;
+}
+
+.services .service h3{
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.portfolio{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+
+    flex-wrap: wrap;
+}
+
+.portfolio .item{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    margin: 20px;
+
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .item .icon img{
+    width: 500px;
+    height: 350px;
+}
+
+.portfolio .item .action{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.portfolio .item .action a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 15px 50px;
+  }
+  
+.portfolio .item .action:hover {
+    opacity: 1;
+}
+
+.contact {
+    position: relative;
+    width: 70%;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+  }
+  
+  .contact-form {
+    position: relative;
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 30px 30px 20px;
+
+    border: 2px solid;
+    border-color: rgb(0, 0, 0, 0.1);
+  }
+  
+  .contact-form form {
+    width: 100%;
+  }
+  
+  .contact-form .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin-right: 10px;
+  }
+  
+  .contact-form .row input,
+  .contact-form .row textarea {
+    position: relative;
+    border: 1px solid;
+    border-color: rgb(0, 0, 0, 0.25);
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 300;
+    margin: 10px 0;
+    resize: none;
+  }
+  
+  .contact-form .row textarea {
+    height: 150px;
+  }
+  
+  .contact-form .row input[type="submit"] {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+  }
