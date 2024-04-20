@@ -318,7 +318,7 @@ section.home{
     cursor: pointer;
   }
 
-  .login-form {
+.login-form {
     max-width: 300px;
     margin: 0 auto;
     padding: 20px;
