@@ -2,224 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "main.css">
-    <title>Programmers World Agency</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Login</title>
 </head>
 <body>
-    <header>
-        <div class = "logo"><h1>Programmers Agency</h1></div>
-        <div class = "toggle"></div>
+    <main>
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-        <div class = "navigation">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-            <ul>
-                <li><a href = "#home">Home</a></li>
-                <li><a href = "#services">Services</a></li>
-                <li><a href = "#works">Our works</a></li>
-                <li><a href = "#contact">Contact</a></li>
-            </ul>
-
+                <button type="submit">Login</button>
+            </form>
         </div>
-    </header>
-    <!-- home -->
-    <section class = "home" id = "home">
-        <div class = "home-content">
-            <div class = "img"> </div>
-            <h2>
-                Hello, we're Programmers Agency
-            </h2>
-            <p>
-                We help <b>you</b> to achieve <b>your goals</b>. Our agency helps you to realize 
-                your own story. Each of us has his own hobby, which can be turned from a hobby 
-                into a business. Our agency helps to transfer your thoughts to our world, using
-                computer technology
-            </p>
-        </div>
-    </section>
+    </main>
 
-    <section id = "services">
-        <div class = "title">
-            <h2>Services that we can help you with</h2>
-            <p>
-                Our team works for the benefit of people. Here you can view what we can do for you.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
-                iusto molestias accusamus rem nobis est, et laborum harum doloremque
-                nemo non, minima quos totam labore maxime iste alias ut esse
-            </p>
-        </div>
-        <div class = "services">
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
-            <div class = "service">
-                <div class = "icon">
-                    <img
-                    src="https://github.com/bradtraversy/creative-agency-website/blob/master/images/001.png?raw=true"
-                    alt=""
-                    />
-                </div>
-                <h3>FrontEND Projects</h3>
-                <p>
-                    We can implement a good visual project by working on the design and animation for your site
-                </p>
-            </div>
+        // Get the entered username and password
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
 
-            <div class = "service">
-                <div class = "icon">
-                    <img
-                    src="https://github.com/bradtraversy/creative-agency-website/blob/master/images/002.png?raw=true"
-                    alt=""
-                    />
-                </div>
-                <h3>BackEND Projects</h3>
-                <p>
-                    We can implement a good server part of your project. Sending data to the database, transactions, chatbots, desktop applications of the site
-                </p>
-            </div>
-
-            <div class = "service">
-                <div class = "icon">
-                    <img
-                    src="https://github.com/bradtraversy/creative-agency-website/blob/master/images/003.png?raw=true"
-                    alt=""
-                    />
-                </div>
-                <h3>Optimization</h3>
-                <p>
-                    Do you have a ready-made project, but it is lagging? Then our development team will help you debug your problem
-                </p>
-            </div>
-
-            <div class="service">
-                <div class="icon">
-                  <img
-                    src="https://github.com/bradtraversy/creative-agency-website/blob/master/images/004.png?raw=true"
-                    alt=""
-                  />
-                </div>
-                <h3>1C Enterprise</h3>
-                <p>
-                    Fast automation of your project in the 1C enterprise system
-                </p>
-              </div>
-
-              <div class="service">
-                <div class="icon">
-                  <img
-                    src="https://github.com/bradtraversy/creative-agency-website/blob/master/images/005.png?raw=true"
-                    alt=""
-                  />
-                </div>
-                <h3>App Development</h3>
-                <p>
-                    Maybe you want to have a mobile app for your project? Then our developers will help you solve this problem
-                </p>
-              </div>
-
-              <div class="service">
-                <div class="icon">
-                  <img
-                    src="https://github.com/bradtraversy/creative-agency-website/blob/master/images/006.png?raw=true"
-                    alt=""
-                  />
-                </div>
-                <h3>Rework</h3>
-                <p>
-                    Do you have a ready-made website, but you need to completely redo it? Our developers will be able to solve this problem as well!
-                </p>
-              </div>
-
-        </div>
-    </section>
-
-    <section id = "works">
-        <div class = "title">
-            <h2>Our works</h2>
-            <p>
-                A few of our recent works
-            </p>
-        </div>
-
-        <div class = "portfolio">
-
-            <div class = "item">
-                <div class = "icon">
-                    <img src = "https://i.pinimg.com/originals/0e/be/bb/0ebebbcd80c9d6b5f98fb7b3c6b666ce.png"
-                    alt = "">
-                </div>
-                <div class="action">
-                    <a href="#">Launch</a>
-                  </div>
-                <h3>WebSite Design #79</h3>
-            </div>
-
-            <div class = "item">
-                <div class = "icon">
-                    <img src = "https://nuancesprog.ru/wp-content/uploads/2018/08/1-2.jpg"
-                    alt = "">
-                </div>
-                <div class="action">
-                    <a href="#">Launch</a>
-                  </div>
-                <h3>Programmer's Backend Screen</h3>
-            </div>
-
-            <div class = "item">
-                <div class = "icon">
-                    <img src = "https://i.pinimg.com/originals/12/d8/c5/12d8c5b9ecb6061f82bac7d4275b23d0.png"
-                    alt = "">
-                </div>
-                <div class="action">
-                    <a href="#">Launch</a>
-                  </div>
-                <h3>WebSite Design #78</h3>
-            </div>
-
-        </div>
-    </section>
-
-    <section id = "contact">
-       
-        <div class = "title">
-            <h2>Contact us</h2>
-            <p>
-                Here you can contact us
-            </p>
-        </div>
-
-        <div class="contact">
-            <div class="contact-form">
-              <form>
-                <div class="row">
-                  <div class="input50">
-                    <input type="text" placeholder="First Name" />
-                  </div>
-                  <div class="input50">
-                    <input type="text" placeholder="Last Name" />
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input50">
-                    <input type="text" placeholder="Email" />
-                  </div>
-                  <div class="input50">
-                    <input type="text" placeholder="Subject" />
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input100">
-                    <textarea placeholder="Message"></textarea>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input100">
-                    <input type="submit" value="Send" />
-                  </div>
-                </div>
-              </form>
-            </div>
-    </section>
-
-    <script src = "script.js"></script>
+        // Check if the username and password are correct
+        if (username === 'admin' && password === 'admin') {
+            // Redirect to another HTML file (replace 'otherpage.html' with the actual file name)
+            window.location.href = 'homepage.html';
+        } else {
+            alert('Invalid username or password. Please try again.');
+        }
+    });
+    </script>
 </body>
 </html>
